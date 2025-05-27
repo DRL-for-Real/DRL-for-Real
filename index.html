@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICCV 2025 DRL for Real Workshop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* 添加单页应用所需的样式 */
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            padding: 80px 0;
+        }
+        .section-divider {
+            margin: 40px 0;
+            border-top: 1px solid #eee;
+        }
+        /* 邀请嘉宾部分样式 */
+        .speakers-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        .speakers-section h2 {
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .speaker-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .speaker-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .speaker-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        .speaker-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ICCV 2025 DRL for Real Workshop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#challenge">Challenge</a></li>
+                <li><a href="#dataset">Dataset</a></li>
+                <li><a href="#speakers">Invited Speakers</a></li>
+                <li><a href="#workshop">Workshop Schedule</a></li>
+                <li><a href="#people">People</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 首页部分 -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>The 1st International Workshop and Challenge on Disentangled Representation Learning for Real-world Applications</h1>
+                <h2>ICCV 2025 DRL for Real Workshop</h2>
+            </div>
+        </section>
+
+        <!-- 介绍部分 -->
+        <section id="introduction" class="intro-section">
+            <h2>01 Introduction</h2>
+            <h3>Disentangled Representation Learning for Real-world Applications (DRL for Real)</h3>
+            <p>Disentangled Representation Learning (DRL) is considered one of the possible ways for AI to fundamentally understand the world. It has the potential to help alleviate hallucination problems in large language models/multimodal large language models and controllability issues in generative models, ultimately leading to Artificial General Intelligence (AGI). Over the years, disentangled representation learning has gained significant academic interest and research contributions, as it is believed to improve model robustness, interpretability, and generalization capabilities.</p>
+            <p>However, the field currently faces a significant gap: the lack of comprehensive, realistic benchmarks and unified evaluation metrics that reflect real-world characteristics, which keeps DRL confined to synthetic toy scenarios and difficult to apply to more practical applications. To bridge this gap, this "DRL for Real" workshop aims to strengthen the development of DRL research towards practicality and real-world applicability.</p>
+            <p>As a project of the ICCV 2025 workshop, we will introduce novel, realistic datasets and comprehensive benchmarks aimed at better evaluating DRL methods in practical scenarios. In addition, the workshop will also discuss specific applications of DRL in key areas such as controllable generation and autonomous driving. Related topics include: disentangled representation learning, generative models, controllable generation, model robustness, interpretability, and generalization capabilities.</p>
+        </section>
+
+        <!-- 挑战部分 -->
+        <section id="challenge" class="challenge-section">
+            <h2>02 Challenge</h2>
+            
+            <div class="challenge-topics">
+                <div class="challenge-topic">
+                    <h3>Topic 1: Real-world Benchmarks for Disentangled Representation Learning</h3>
+                    <p>Design and implement novel benchmarks for evaluating disentangled representation learning in real-world scenarios. These benchmarks should reflect the complexity and diversity of the real world, and provide meaningful evaluation metrics for disentangled representation learning.</p>
+                    <ul>
+                        <li>Design benchmarks that reflect real-world complexity</li>
+                        <li>Implement evaluation metrics for disentanglement quality</li>
+                        <li>Demonstrate the effectiveness of the benchmarks on existing DRL methods</li>
+                    </ul>
+                </div>
+                
+                <div class="challenge-topic">
+                    <h3>Topic 2: Disentangled Representation Learning for Controllable Generation</h3>
+                    <p>Develop disentangled representation learning methods for controllable generation tasks, such as image generation, text-to-image generation, and video generation. The goal is to enable fine-grained control over the generation process through disentangled representations.</p>
+                    <ul>
+                        <li>Develop DRL methods for controllable generation</li>
+                        <li>Demonstrate fine-grained control over generation attributes</li>
+                        <li>Evaluate the quality and diversity of generated content</li>
+                    </ul>
+                </div>
+                
+                <div class="challenge-topic">
+                    <h3>Topic 3: Disentangled Representation Learning for Autonomous Driving</h3>
+                    <p>Apply disentangled representation learning to autonomous driving tasks, such as scene understanding, trajectory prediction, and decision making. The goal is to improve the robustness, interpretability, and generalization capabilities of autonomous driving systems through disentangled representations.</p>
+                    <ul>
+                        <li>Apply DRL to autonomous driving tasks</li>
+                        <li>Improve robustness and generalization in diverse environments</li>
+                        <li>Enhance interpretability of driving decisions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="challenge-dates">
+                <h3>Important Dates</h3>
+                <ul>
+                    <li><strong>January 15, 2025:</strong> Challenge announcement and dataset release</li>
+                    <li><strong>May 31, 2025:</strong> Submission deadline</li>
+                    <li><strong>June 15, 2025:</strong> Results announcement</li>
+                    <li><strong>July 1, 2025:</strong> Camera-ready paper submission deadline</li>
+                    <li><strong>October 2025:</strong> Workshop presentation at ICCV 2025</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 数据集部分 -->
+        <section id="dataset" class="dataset-section">
+            <h2>03 Dataset</h2>
+            <h3>DRL for Real Dataset</h3>
+            
+            <div class="dataset-description">
+                <p>To bridge the gap between theoretical research and practical applications in disentangled representation learning, we will introduce a series of novel, realistic datasets that reflect the complexity and diversity of the real world. These datasets will contain multiple modalities, multiple attributes, and complex interrelationships, providing more challenging benchmarks for research in disentangled representation learning.</p>
+                
+                <p>Our datasets will cover the following key areas:</p>
+                <ul>
+                    <li><strong>Multi-attribute Image Dataset</strong>: Contains images with multiple controllable attributes such as shape, color, texture, pose, etc., with complex interrelationships between these attributes.</li>
+                    <li><strong>Temporal Dataset</strong>: Contains data that changes over time, used to evaluate the ability of disentangled representation learning to capture temporal dynamics and causal relationships.</li>
+                    <li><strong>Cross-domain Dataset</strong>: Contains data from different domains, used to evaluate the ability of disentangled representation learning in cross-domain generalization.</li>
+                </ul>
+                
+                <p>Participants can use our provided datasets, or other public or private datasets, as long as they provide detailed data descriptions when submitting. We encourage participants to explore the potential of disentangled representation learning in various practical application scenarios.</p>
+            </div>
+            
+            <div class="dataset-download">
+                <h3>Dataset Download</h3>
+                <p>The datasets will be released in January 2025 when the challenge starts. Please visit the official website at that time to get the dataset download links.</p>
+            </div>
+            
+            <div class="dataset-examples">
+                <div class="dataset-example">
+                    <img src="https://via.placeholder.com/400x300?text=Multi-attribute+Image" alt="Multi-attribute Image">
+                    <p><strong>Multi-attribute Image Example</strong></p>
+                    <p>This dataset contains images with multiple controllable attributes such as shape, color, texture, pose, etc. The goal of disentangled representation learning is to learn to decouple these attributes into independent representations, allowing each attribute to be controlled individually without affecting others.</p>
+                </div>
+                
+                <div class="dataset-example">
+                    <img src="https://via.placeholder.com/400x300?text=Temporal+Data" alt="Temporal Data">
+                    <p><strong>Temporal Data Example</strong></p>
+                    <p>This dataset contains data that changes over time, used to evaluate the ability of disentangled representation learning to capture temporal dynamics and causal relationships. By learning disentangled representations along the temporal dimension, models can better understand and predict the behavior of complex systems.</p>
+                </div>
+            </div>
+            
+            <div class="dataset-license">
+                <p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Researchers are free to use these datasets for academic research, but must provide appropriate citations and follow the license terms.</p>
+            </div>
+        </section>
+
+        <!-- 邀请嘉宾部分 -->
+        <section id="speakers" class="speakers-section">
+            <h2>04 Invited Speakers</h2>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <img src="https://via.placeholder.com/150?text=TM" alt="Tao Mei">
+                    <h3>Tao Mei</h3>
+                    <p>HiDream.ai</p>
+                    <p>Founder & CEO</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <img src="https://via.placeholder.com/150?text=JW" alt="Jiajun Wu">
+                    <h3>Jiajun Wu</h3>
+                    <p>Stanford University</p>
+                    <p>Assistant Professor</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <img src="https://via.placeholder.com/150?text=TL" alt="Tongliang Liu">
+                    <h3>Tongliang Liu</h3>
+                    <p>The University of Sydney</p>
+                    <p>Associate Professor</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <img src="https://via.placeholder.com/150?text=DR" alt="Deva Ramanan">
+                    <h3>Deva Ramanan</h3>
+                    <p>Carnegie Mellon University</p>
+                    <p>Professor</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <img src="https://via.placeholder.com/150?text=OR" alt="Olga Russakovsky">
+                    <h3>Olga Russakovsky</h3>
+                    <p>Princeton University</p>
+                    <p>Assistant Professor</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <img src="https://via.placeholder.com/150?text=PI" alt="Phillip Isola">
+                    <h3>Phillip Isola</h3>
+                    <p>Massachusetts Institute of Technology</p>
+                    <p>Associate Professor</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 研讨会日程部分 -->
+        <section id="workshop" class="workshop-section">
+            <h2>05 Workshop Schedule</h2>
+            <h3>DRL for Real: The 1st International Workshop and Challenge on Disentangled Representation Learning for Real-world Applications</h3>
+            
+            <div class="workshop-schedule">
+                <div class="workshop-session">
+                    <h3>Part One</h3>
+                    <h4>Introduction & Organizer Talks</h4>
+                    <table>
+                        <tr>
+                            <td>09:00 - 09:10</td>
+                            <td>Opening Remarks</td>
+                            <td>Xin Jin (EIT)</td>
+                        </tr>
+                        <tr>
+                            <td>09:10 - 09:30</td>
+                            <td>DRL for Real Dataset & Challenge Introduction</td>
+                            <td>Qiuyu Chen (EIT)</td>
+                        </tr>
+                        <tr>
+                            <td>09:30 - 09:50</td>
+                            <td>Theoretical Foundations of Disentangled Representation Learning</td>
+                            <td>Yue Song (Caltech)</td>
+                        </tr>
+                        <tr>
+                            <td>09:50 - 10:10</td>
+                            <td>Applications of Disentangled Representation Learning in Computer Vision</td>
+                            <td>Xihui Liu (HKU) & Shuai Yang (PKU)</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="workshop-break">
+                    <p>10:10 - 10:30 Coffee Break</p>
+                </div>
+                
+                <div class="workshop-session">
+                    <h3>Part Two</h3>
+                    <h4>Invited Talks</h4>
+                    <table>
+                        <tr>
+                            <td>10:30 - 11:00</td>
+                            <td>Invited Talk 1</td>
+                            <td>Tao Mei (HiDream.ai)</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 - 11:30</td>
+                            <td>Invited Talk 2</td>
+                            <td>Jiajun Wu (Stanford University)</td>
+                        </tr>
+                        <tr>
+                            <td>11:30 - 12:00</td>
+                            <td>Invited Talk 3</td>
+                            <td>Tongliang Liu (The University of Sydney)</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="workshop-break">
+                    <p>12:00 - 13:30 Lunch</p>
+                </div>
+                
+                <div class="workshop-session">
+                    <h3>Part Three</h3>
+                    <h4>Invited Talks & Challenge Winner Presentations</h4>
+                    <table>
+                        <tr>
+                            <td>13:30 - 14:00</td>
+                            <td>Invited Talk 4</td>
+                            <td>Deva Ramanan (Carnegie Mellon University)</td>
+                        </tr>
+                        <tr>
+                            <td>14:00 - 14:30</td>
+                            <td>Invited Talk 5</td>
+                            <td>Olga Russakovsky (Princeton University)</td>
+                        </tr>
+                        <tr>
+                            <td>14:30 - 15:00</td>
+                            <td>Invited Talk 6</td>
+                            <td>Phillip Isola (Massachusetts Institute of Technology)</td>
+                        </tr>
+                        <tr>
+                            <td>15:00 - 15:30</td>
+                            <td>Challenge Winner Presentations</td>
+                            <td>DRL for Real Challenge Winners</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="workshop-break">
+                    <p>15:30 - 16:00 Coffee Break</p>
+                </div>
+                
+                <div class="workshop-session">
+                    <h3>Part Four</h3>
+                    <h4>Poster Session & Closing</h4>
+                    <table>
+                        <tr>
+                            <td>16:00 - 17:30</td>
+                            <td>Poster Session & Discussion</td>
+                            <td>All Participants</td>
+                        </tr>
+                        <tr>
+                            <td>17:30 - 17:45</td>
+                            <td>Closing Remarks</td>
+                            <td>Wenjun (Kevin) Zeng (EIT)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 人员部分 -->
+        <section id="people" class="people-section">
+            <h2>06 People</h2>
+            
+            <div class="people-category">
+                <h3>Main Organizers</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=XJ" alt="Xin Jin">
+                        <h3>Xin Jin</h3>
+                        <p>Professor</p>
+                        <p>Eastern Institute of Technology, Ningbo, China</p>
+                        <p><a href="mailto:jinxin@eitech.edu.cn">jinxin@eitech.edu.cn</a></p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=QC" alt="Qiuyu Chen">
+                        <h3>Qiuyu Chen</h3>
+                        <p>Dr.</p>
+                        <p>Eastern Institute of Technology, Ningbo, China</p>
+                        <p><a href="mailto:canghaimeng@sjtu.edu.cn">canghaimeng@sjtu.edu.cn</a></p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=YS" alt="Yue Song">
+                        <h3>Yue Song</h3>
+                        <p>Professor</p>
+                        <p>California Institute of Technology (Caltech), USA</p>
+                        <p><a href="mailto:yue.song@unitn.it">yue.song@unitn.it</a></p>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=XL" alt="Xihui Liu">
+                        <h3>Xihui Liu</h3>
+                        <p>Professor</p>
+                        <p>The University of Hong Kong, Hong Kong, China</p>
+                        <p><a href="mailto:xihuiliu@eee.hku.hk">xihuiliu@eee.hku.hk</a></p>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=SY" alt="Shuai Yang">
+                        <h3>Shuai Yang</h3>
+                        <p>Professor</p>
+                        <p>Peking University, Beijing, China</p>
+                        <p><a href="mailto:williamyang@pku.edu.cn">williamyang@pku.edu.cn</a></p>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=TY" alt="Tao Yang">
+                        <h3>Tao Yang</h3>
+                        <p>Dr.</p>
+                        <p>Xi'an Jiaotong University, Xi'an, China</p>
+                        <p><a href="mailto:yt14212@stu.xjtu.edu.cn">yt14212@stu.xjtu.edu.cn</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="people-category">
+                <h3>Program Committee</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=BX" alt="Ba'ao Xie">
+                        <h3>Ba'ao Xie</h3>
+                        <p>Professor</p>
+                        <p>Eastern Institute of Technology, Ningbo, China</p>
+                        <p><a href="mailto:bxie@idt.eitech.edu.cn">bxie@idt.eitech.edu.cn</a></p>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=NS" alt="Nicu Sebe">
+                        <h3>Nicu Sebe</h3>
+                        <p>Professor, Fellow of IAPR</p>
+                        <p>University of Trento, Italy</p>
+                        <p><a href="mailto:niculae.sebe@unitn.it">niculae.sebe@unitn.it</a></p>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="https://via.placeholder.com/150?text=WZ" alt="Wenjun Zeng">
+                        <h3>Wenjun (Kevin) Zeng</h3>
+                        <p>Professor, IEEE Fellow</p>
+                        <p>Eastern Institute of Technology, Ningbo, China</p>
+                        <p><a href="mailto:kevzeng@eitech.edu.cn">kevzeng@eitech.edu.cn</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式部分 -->
+        <section class="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-person">
+                    <h3>Xin Jin</h3>
+                    <p>jinxin@eitech.edu.cn</p>
+                    <p>Professor, Eastern Institute of Technology, Ningbo, China</p>
+                </div>
+                <div class="contact-person">
+                    <h3>Qiuyu Chen</h3>
+                    <p>canghaimeng@sjtu.edu.cn</p>
+                    <p>Ph.D, Shanghai Jiao Tong University, Shanghai, China</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DRL for Real Workshop. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // 平滑滚动到锚点
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 高亮当前导航项
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('main > section');
+            const navItems = document.querySelectorAll('nav ul li a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
