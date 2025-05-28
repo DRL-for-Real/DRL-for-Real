@@ -68,8 +68,9 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#challenge">Challenge</a></li>
                 <li><a href="#dataset">Dataset</a></li>
+                <li><a href="#challenge">Challenge</a></li>
+                <li><a href="#competition">Competition Overview</a></li>
                 <li><a href="#speakers">Invited Speakers</a></li>
                 <li><a href="#workshop">Workshop Schedule</a></li>
                 <li><a href="#people">People</a></li>
@@ -81,92 +82,96 @@
         <!-- 首页部分 -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>The 1st International Workshop and Challenge on Disentangled Representation Learning for Real-world Applications</h1>
+                <h1>The 1st International Workshop and Challenge on Disentangled Representation Learning for Controllable Generation</h1>
                 <h2>ICCV 2025 DRL for Real Workshop</h2>
             </div>
         </section>
 
         <!-- 介绍部分 -->
         <section id="introduction" class="intro-section">
-            <h2>01 Introduction</h2>
-            <h3>Disentangled Representation Learning for Real-world Applications (DRL for Real)</h3>
-            <p>Disentangled Representation Learning (DRL) is considered one of the possible ways for AI to fundamentally understand the world. It has the potential to help alleviate hallucination problems in large language models/multimodal large language models and controllability issues in generative models, ultimately leading to Artificial General Intelligence (AGI). Over the years, disentangled representation learning has gained significant academic interest and research contributions, as it is believed to improve model robustness, interpretability, and generalization capabilities.</p>
-            <p>However, the field currently faces a significant gap: the lack of comprehensive, realistic benchmarks and unified evaluation metrics that reflect real-world characteristics, which keeps DRL confined to synthetic toy scenarios and difficult to apply to more practical applications. To bridge this gap, this "DRL for Real" workshop aims to strengthen the development of DRL research towards practicality and real-world applicability.</p>
-            <p>As a project of the ICCV 2025 workshop, we will introduce novel, realistic datasets and comprehensive benchmarks aimed at better evaluating DRL methods in practical scenarios. In addition, the workshop will also discuss specific applications of DRL in key areas such as controllable generation and autonomous driving. Related topics include: disentangled representation learning, generative models, controllable generation, model robustness, interpretability, and generalization capabilities.</p>
-        </section>
-
-        <!-- 挑战部分 -->
-        <section id="challenge" class="challenge-section">
-            <h2>02 Challenge</h2>
-            
-            <div class="challenge-topics">
-                <div class="challenge-topic">
-                    <h3>Topic 1: Real-world Benchmarks for Disentangled Representation Learning</h3>
-                    <p>Design and implement novel benchmarks for evaluating disentangled representation learning in real-world scenarios. These benchmarks should reflect the complexity and diversity of the real world, and provide meaningful evaluation metrics for disentangled representation learning.</p>
-                    <ul>
-                        <li>Design benchmarks that reflect real-world complexity</li>
-                        <li>Implement evaluation metrics for disentanglement quality</li>
-                        <li>Demonstrate the effectiveness of the benchmarks on existing DRL methods</li>
-                    </ul>
-                </div>
-                
-                <div class="challenge-topic">
-                    <h3>Topic 2: Disentangled Representation Learning for Controllable Generation</h3>
-                    <p>Develop disentangled representation learning methods for controllable generation tasks, such as image generation, text-to-image generation, and video generation. The goal is to enable fine-grained control over the generation process through disentangled representations.</p>
-                    <ul>
-                        <li>Develop DRL methods for controllable generation</li>
-                        <li>Demonstrate fine-grained control over generation attributes</li>
-                        <li>Evaluate the quality and diversity of generated content</li>
-                    </ul>
-                </div>
-                
-                <div class="challenge-topic">
-                    <h3>Topic 3: Disentangled Representation Learning for Autonomous Driving</h3>
-                    <p>Apply disentangled representation learning to autonomous driving tasks, such as scene understanding, trajectory prediction, and decision making. The goal is to improve the robustness, interpretability, and generalization capabilities of autonomous driving systems through disentangled representations.</p>
-                    <ul>
-                        <li>Apply DRL to autonomous driving tasks</li>
-                        <li>Improve robustness and generalization in diverse environments</li>
-                        <li>Enhance interpretability of driving decisions</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="challenge-dates">
-                <h3>Important Dates</h3>
-                <ul>
-                    <li><strong>January 15, 2025:</strong> Challenge announcement and dataset release</li>
-                    <li><strong>May 31, 2025:</strong> Submission deadline</li>
-                    <li><strong>June 15, 2025:</strong> Results announcement</li>
-                    <li><strong>July 1, 2025:</strong> Camera-ready paper submission deadline</li>
-                    <li><strong>October 2025:</strong> Workshop presentation at ICCV 2025</li>
-                </ul>
-            </div>
+            <h2>01 Overview</h2>
+            <h3>Disentangled Representation Learning for Controllable Generation (DRL for Real)</h3>
+            <p>Disentangled Representation Learning (DRL) shows promise for enhancing AI's fundamental understanding of the world, potentially addressing hallucination issues in language models and improving controllability in generative systems. Despite significant academic interest, DRL research remains confined to synthetic scenarios due to a lack of realistic benchmarks and unified evaluation metrics.</p>
+            <p>ICCV 2025 DRL for Real Workshop aims to bridge this gap by introducing novel, realistic datasets and comprehensive benchmarks for evaluating DRL methods in practical applications. We will focus on key areas including controllable generation and autonomous driving, exploring how DRL can advance model robustness, interpretability, and generalization capabilities.</p>
         </section>
 
         <!-- 数据集部分 -->
         <section id="dataset" class="dataset-section">
-            <h2>03 Dataset</h2>
+            <h2>02 Dataset</h2>
             <h3>DRL for Real Dataset</h3>
             
             <div class="dataset-description">
-                <p>To bridge the gap between theoretical research and practical applications in disentangled representation learning, we will introduce a series of novel, realistic datasets that reflect the complexity and diversity of the real world. These datasets will contain multiple modalities, multiple attributes, and complex interrelationships, providing more challenging benchmarks for research in disentangled representation learning.</p>
+                <p>The DRL for Real dataset is specifically designed for disentangled representation learning research, covering multiple realistic scenarios and diverse disentanglement factors. It consists of two main categories aligned with our competition tracks:</p>
                 
-                <p>Our datasets will cover the following key areas:</p>
                 <ul>
-                    <li><strong>Multi-attribute Image Dataset</strong>: Contains images with multiple controllable attributes such as shape, color, texture, pose, etc., with complex interrelationships between these attributes.</li>
-                    <li><strong>Temporal Dataset</strong>: Contains data that changes over time, used to evaluate the ability of disentangled representation learning to capture temporal dynamics and causal relationships.</li>
-                    <li><strong>Cross-domain Dataset</strong>: Contains data from different domains, used to evaluate the ability of disentangled representation learning in cross-domain generalization.</li>
+                    <li><strong>General Image Subset</strong>: Contains approximately 25,000 images across several distinct categories, such as human faces, animals, plants, etc. Images in this subset are partially synthesized using text-to-image generative models, while others are derived from controllable generation video sources such as time-lapse photography. This dataset features simultaneous variations in multiple factors, challenging models to disentangle complex, interrelated attributes.
+                    
+                        <!-- 单因子挑战视频展示 -->
+                        <div class="single-factor-videos">
+                            <h4>Single-Factor Manipulation Examples</h4>
+                            <p>Below are demonstration videos showing examples of single-factor manipulation:</p>
+                            <div class="video-container">
+                                <div class="video-item">
+                                    <h5>Car Color Manipulation</h5>
+                                    <video controls width="100%">
+                                        <source src="video/car_color.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="video-item">
+                                    <h5>Hair Color Manipulation</h5>
+                                    <video controls width="100%">
+                                        <source src="video/hair color.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="video-item">
+                                    <h5>Rose Color Manipulation</h5>
+                                    <video controls width="100%">
+                                        <source src="video/rose_color.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li><strong>Autonomous Driving Subset</strong>: A vehicle-centered dataset featuring seven camera perspectives:
+                        <ul>
+                            <li>Six outward-facing cameras positioned around the vehicle</li>
+                            <li>One top-down overview camera</li>
+                        </ul>
+                        <p>Each sample consists of 50-100 frames extracted from videos captured by these seven cameras, with simultaneous variations in vehicle motion state, weather conditions (rainy, foggy, sunny), lighting, and other environmental factors. The dataset includes 12 distinct vehicle types and more than 5 background scenarios, systematically generated using the CARLA simulator.</p>
+                        
+                        <!-- 自动驾驶数据集视频展示 -->
+                        <div class="single-factor-videos">
+                            <h4>Autonomous Driving Example</h4>
+                            <p>It is a demonstration video showing an example from the autonomous driving dataset:</p>
+                            <div class="video-container">
+                                <div class="video-item">
+                                    <h5>Autonomous Driving Scene</h5>
+                                    <video controls width="100%">
+                                        <source src="video/auto.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 
-                <p>Participants can use our provided datasets, or other public or private datasets, as long as they provide detailed data descriptions when submitting. We encourage participants to explore the potential of disentangled representation learning in various practical application scenarios.</p>
+                
+                <p>For more details about the dataset, please visit the <a href="dataset.html">Dataset</a> page.</p>
             </div>
             
             <div class="dataset-download">
                 <h3>Dataset Download</h3>
-                <p>The datasets will be released in January 2025 when the challenge starts. Please visit the official website at that time to get the dataset download links.</p>
+                <p>The datasets will be released in May 2025 when the challenge starts. Please visit the official website at that time to get the dataset download links.</p>
             </div>
             
             <div class="dataset-examples">
+                <!-- 暂时隐藏数据集卡片 - Multi-attribute Image 和 Temporal Data 相关内容 -->
+                <!--
                 <div class="dataset-example">
                     <img src="https://via.placeholder.com/400x300?text=Multi-attribute+Image" alt="Multi-attribute Image">
                     <p><strong>Multi-attribute Image Example</strong></p>
@@ -178,65 +183,102 @@
                     <p><strong>Temporal Data Example</strong></p>
                     <p>This dataset contains data that changes over time, used to evaluate the ability of disentangled representation learning to capture temporal dynamics and causal relationships. By learning disentangled representations along the temporal dimension, models can better understand and predict the behavior of complex systems.</p>
                 </div>
+                -->
             </div>
             
-            <div class="dataset-license">
+            <!-- <div class="dataset-license">
                 <p>This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Researchers are free to use these datasets for academic research, but must provide appropriate citations and follow the license terms.</p>
+            </div> -->
+        </section>
+
+        <!-- 挑战与竞赛部分 -->
+        <section id="challenge" class="challenge-section">
+            <h2>03 Challenge</h2>
+            
+            <div class="challenge-overview">
+                <p>Our competition is designed to advance the field of disentangled representation learning through realistic benchmarks and comprehensive evaluation metrics. The challenge is divided into two main tracks:</p>
             </div>
+            
+            <div class="challenge-tracks">
+                <!-- 单因子赛道 -->
+                <div class="challenge-track">
+                    <h3>Competition Tracks</h3>
+                    
+                    <div class="track-section">
+                        <h4>1. Single-Factor Track</h4>
+                        <p>This track provides over 10,000 images covering multiple scenarios, dozens of objects, and hundreds of single-factor variations with text descriptions. Participants <strong>must use disentanglement models</strong> for this track.</p>
+                        
+                        <h5>Evaluation Metrics</h5>
+                        <ul>
+                            <li><strong>Image Quality (50%):</strong> Measured using Fréchet Inception Distance (FID)</li>
+                            <li><strong>Latent Variable Disentanglement (50%):</strong> Evaluated using Bidirectional DCI, which extends the traditional DCI metric by also measuring how perturbations in real images affect the corresponding latent variables in the encoder</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="track-section">
+                        <h4>2. Multi-Factor Track</h4>
+                        <p>This track is divided into two sub-categories, each with two separate leaderboards:</p>
+                        
+                        <div class="multi-factor-category">
+                            <h5>2.1 General Image Dataset</h5>
+                            <ul>
+                                <li><strong>Overall Leaderboard:</strong> Open to all methods. Evaluation uses LLM+VQA to assess:
+                                    <ul>
+                                        <li>Correct attribute generation based on given text</li>
+                                        <li>Change intensity scoring across a set of images</li>
+                                        <li>Ratio of intended attribute changes to unintended changes (closer to 1 is better)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Disentanglement Leaderboard:</strong> Only for disentanglement models, using the same metrics as the Single-Factor Track</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="multi-factor-category">
+                            <h5>2.2 Autonomous Dataset</h5>
+                            <p>A vehicle-centered dataset featuring seven camera perspectives:</p>
+                            <ul>
+                                <li>Six outward-facing cameras positioned around the vehicle</li>
+                                <li>One top-down overview camera</li>
+                            </ul>
+                            <p>Each sample consists of 50-100 frames with simultaneous variations in vehicle motion state, weather conditions, lighting, and other environmental factors.</p>
+                            <ul>
+                                <li><strong>Overall Leaderboard:</strong> Evaluation uses Structural Similarity Index Measure (SSIM) to compare reconstructed frames with ground truth</li>
+                                <li><strong>Disentanglement Leaderboard:</strong> Only for disentanglement models, using the same metrics as the Single-Factor Track</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="challenge-dates">
+                <h3>Important Dates</h3>
+                <ul>
+                    <li><strong>May 25, 2025:</strong> Competition Announcement and Dataset Release</li>
+                    <li><strong>June 25, 2025:</strong> Competition Submission Deadline</li>
+                    <li><strong>June 30, 2025:</strong> Paper Submission Deadline</li>
+                    <li><strong>July 1, 2025:</strong> Notification of Competition Results</li>
+                    <li><strong>July 10, 2025:</strong> Notification of Paper Acceptance</li>
+                    <li><strong>August 15, 2025:</strong> Final Documents Submission to ICCV</li>
+                    <li><strong>October 2025:</strong> Workshop and Competition Results Presentation at ICCV 2025</li>
+                </ul>
+            </div>
+            
+            <p>Top three winners from each leaderboard will be invited to the ICCV conference to present their work.</p>
+            <p>For more details about the challenge, please visit the <a href="challenge.html">Challenge</a> page.</p>
         </section>
 
         <!-- 邀请嘉宾部分 -->
         <section id="speakers" class="speakers-section">
             <h2>04 Invited Speakers</h2>
-            <div class="speakers-grid">
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150?text=TM" alt="Tao Mei">
-                    <h3>Tao Mei</h3>
-                    <p>HiDream.ai</p>
-                    <p>Founder & CEO</p>
-                </div>
-                
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150?text=JW" alt="Jiajun Wu">
-                    <h3>Jiajun Wu</h3>
-                    <p>Stanford University</p>
-                    <p>Assistant Professor</p>
-                </div>
-                
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150?text=TL" alt="Tongliang Liu">
-                    <h3>Tongliang Liu</h3>
-                    <p>The University of Sydney</p>
-                    <p>Associate Professor</p>
-                </div>
-                
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150?text=DR" alt="Deva Ramanan">
-                    <h3>Deva Ramanan</h3>
-                    <p>Carnegie Mellon University</p>
-                    <p>Professor</p>
-                </div>
-                
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150?text=OR" alt="Olga Russakovsky">
-                    <h3>Olga Russakovsky</h3>
-                    <p>Princeton University</p>
-                    <p>Assistant Professor</p>
-                </div>
-                
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150?text=PI" alt="Phillip Isola">
-                    <h3>Phillip Isola</h3>
-                    <p>Massachusetts Institute of Technology</p>
-                    <p>Associate Professor</p>
-                </div>
+            <div class="speakers-container">
+                <h3 style="text-align: center; margin: 40px 0;">Coming Soon</h3>
             </div>
         </section>
 
         <!-- 研讨会日程部分 -->
         <section id="workshop" class="workshop-section">
             <h2>05 Workshop Schedule</h2>
-            <h3>DRL for Real: The 1st International Workshop and Challenge on Disentangled Representation Learning for Real-world Applications</h3>
+            <h3>DRL for Real: The 1st International Workshop and Challenge on Disentangled Representation Learning for Controllable Generation</h3>
             
             <div class="workshop-schedule">
                 <div class="workshop-session">
@@ -246,22 +288,22 @@
                         <tr>
                             <td>09:00 - 09:10</td>
                             <td>Opening Remarks</td>
-                            <td>Xin Jin (EIT)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>09:10 - 09:30</td>
                             <td>DRL for Real Dataset & Challenge Introduction</td>
-                            <td>Qiuyu Chen (EIT)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>09:30 - 09:50</td>
                             <td>Theoretical Foundations of Disentangled Representation Learning</td>
-                            <td>Yue Song (Caltech)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>09:50 - 10:10</td>
                             <td>Applications of Disentangled Representation Learning in Computer Vision</td>
-                            <td>Xihui Liu (HKU) & Shuai Yang (PKU)</td>
+                            <td>Professor XXX & Professor XXX</td>
                         </tr>
                     </table>
                 </div>
@@ -277,17 +319,17 @@
                         <tr>
                             <td>10:30 - 11:00</td>
                             <td>Invited Talk 1</td>
-                            <td>Tao Mei (HiDream.ai)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>11:00 - 11:30</td>
                             <td>Invited Talk 2</td>
-                            <td>Jiajun Wu (Stanford University)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>11:30 - 12:00</td>
                             <td>Invited Talk 3</td>
-                            <td>Tongliang Liu (The University of Sydney)</td>
+                            <td>Professor XXX</td>
                         </tr>
                     </table>
                 </div>
@@ -303,17 +345,17 @@
                         <tr>
                             <td>13:30 - 14:00</td>
                             <td>Invited Talk 4</td>
-                            <td>Deva Ramanan (Carnegie Mellon University)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>14:00 - 14:30</td>
                             <td>Invited Talk 5</td>
-                            <td>Olga Russakovsky (Princeton University)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>14:30 - 15:00</td>
                             <td>Invited Talk 6</td>
-                            <td>Phillip Isola (Massachusetts Institute of Technology)</td>
+                            <td>Professor XXX</td>
                         </tr>
                         <tr>
                             <td>15:00 - 15:30</td>
@@ -339,7 +381,7 @@
                         <tr>
                             <td>17:30 - 17:45</td>
                             <td>Closing Remarks</td>
-                            <td>Wenjun (Kevin) Zeng (EIT)</td>
+                            <td>Professor XXX</td>
                         </tr>
                     </table>
                 </div>
@@ -348,29 +390,29 @@
 
         <!-- 人员部分 -->
         <section id="people" class="people-section">
-            <h2>06 People</h2>
+            <h2>07 People</h2>
             
             <div class="people-category">
-                <h3>Main Organizers</h3>
+                <h3>Organizers</h3>
                 <div class="people-grid">
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=XJ" alt="Xin Jin">
+                        <img src="images/jinxin.jpg" alt="Xin Jin">
                         <h3>Xin Jin</h3>
                         <p>Professor</p>
                         <p>Eastern Institute of Technology, Ningbo, China</p>
                         <p><a href="mailto:jinxin@eitech.edu.cn">jinxin@eitech.edu.cn</a></p>
                     </div>
-                    
+
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=QC" alt="Qiuyu Chen">
+                        <img src="images/chenqiuyu.jpg" alt="Qiuyu Chen">
                         <h3>Qiuyu Chen</h3>
-                        <p>Dr.</p>
-                        <p>Eastern Institute of Technology, Ningbo, China</p>
+                        <p>Ph.D.</p>
+                        <p>Shanghai Jiao Tong University, Shanghai, China</p>
                         <p><a href="mailto:canghaimeng@sjtu.edu.cn">canghaimeng@sjtu.edu.cn</a></p>
                     </div>
                     
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=YS" alt="Yue Song">
+                        <img src="images/songyue.png" alt="Yue Song">
                         <h3>Yue Song</h3>
                         <p>Professor</p>
                         <p>California Institute of Technology (Caltech), USA</p>
@@ -378,7 +420,7 @@
                     </div>
 
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=XL" alt="Xihui Liu">
+                        <img src="images/XihuiLiu-photo.jpeg" alt="Xihui Liu">
                         <h3>Xihui Liu</h3>
                         <p>Professor</p>
                         <p>The University of Hong Kong, Hong Kong, China</p>
@@ -386,7 +428,7 @@
                     </div>
 
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=SY" alt="Shuai Yang">
+                        <img src="images/yangshuai.png" alt="Shuai Yang">
                         <h3>Shuai Yang</h3>
                         <p>Professor</p>
                         <p>Peking University, Beijing, China</p>
@@ -394,20 +436,39 @@
                     </div>
 
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=TY" alt="Tao Yang">
+                        <img src="images/yangtao.jpg" alt="Tao Yang">
                         <h3>Tao Yang</h3>
-                        <p>Dr.</p>
+                        <p>Doctor</p>
                         <p>Xi'an Jiaotong University, Xi'an, China</p>
                         <p><a href="mailto:yt14212@stu.xjtu.edu.cn">yt14212@stu.xjtu.edu.cn</a></p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="people-category">
-                <h3>Program Committee</h3>
-                <div class="people-grid">
+                    
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=BX" alt="Ba'ao Xie">
+                        <img src="images/liziqiang.jpg" alt="Ziqiang Li">
+                        <h3>Ziqiang Li</h3>
+                        <p>Ph.D.</p>
+                        <p>Shanghai Jiao Tong University, Shanghai, China</p>
+                        <p><a href="mailto:ziqiangli@sjtu.edu.cn">ziqiangli@sjtu.edu.cn</a></p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <img src="images/huangjianguo.jpg" alt="Jianguo Huang">
+                        <h3>Jianguo Huang</h3>
+                        <p>Ph.D.</p>
+                        <p>Eastern Institute of Technology, Ningbo, China</p>
+                        <p><a href="mailto:huangjgtmyz@gmail.com">huangjgtmyz@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <img src="images/weiyuntao.jpg" alt="Yuntao Wei">
+                        <h3>Yuntao Wei</h3>
+                        <p>Ph.D.</p>
+                        <p>The Hong Kong Polytechnic University, Hong Kong, China</p>
+                        <p><a href="mailto:yuntao.wei@connect.polyu.hk">yuntao.wei@connect.polyu.hk</a></p>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="images/xiebaao.jpg" alt="Baao Xie">
                         <h3>Ba'ao Xie</h3>
                         <p>Professor</p>
                         <p>Eastern Institute of Technology, Ningbo, China</p>
@@ -415,7 +476,7 @@
                     </div>
 
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=NS" alt="Nicu Sebe">
+                        <img src="images/nicusebe.png" alt="Nicu Sebe">
                         <h3>Nicu Sebe</h3>
                         <p>Professor, Fellow of IAPR</p>
                         <p>University of Trento, Italy</p>
@@ -423,12 +484,48 @@
                     </div>
 
                     <div class="person-card">
-                        <img src="https://via.placeholder.com/150?text=WZ" alt="Wenjun Zeng">
+                        <img src="images/zengwenjun.jpg" alt="Wenjun (Kevin) Zeng">
                         <h3>Wenjun (Kevin) Zeng</h3>
                         <p>Professor, IEEE Fellow</p>
                         <p>Eastern Institute of Technology, Ningbo, China</p>
                         <p><a href="mailto:kevzeng@eitech.edu.cn">kevzeng@eitech.edu.cn</a></p>
                     </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="people-category">
+                <h3>Assistance</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <h3>Zhenyu Hu</h3>
+                        <p>Engineer</p>
+                        <p>Institute of Digital Twin, EIT, Ningbo, China</p>
+                        <p><a href="mailto:zhu@idt.eitech.edu.cn">zhu@idt.eitech.edu.cn</a></p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <h3>Qi Wang</h3>
+                        <p>Ph.D.</p>
+                        <p>Shanghai Jiao Tong University, Shanghai, China</p>
+                        <p><a href="mailto:qiwang067@sjtu.edu.cn">qiwang067@sjtu.edu.cn</a></p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <h3>Yunnan Wang</h3>
+                        <p>Ph.D.</p>
+                        <p>Shanghai Jiao Tong University, Shanghai, China</p>
+                        <p><a href="mailto:wangyunnan@sjtu.edu.cn">wangyunnan@sjtu.edu.cn</a></p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <h3>Wenyao Zhang</h3>
+                        <p>Ph.D.</p>
+                        <p>Shanghai Jiao Tong University, Shanghai, China</p>
+                        <p><a href="mailto:wy_zhang@sjtu.edu.cn">wy_zhang@sjtu.edu.cn</a></p>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -445,7 +542,7 @@
                 <div class="contact-person">
                     <h3>Qiuyu Chen</h3>
                     <p>canghaimeng@sjtu.edu.cn</p>
-                    <p>Ph.D, Shanghai Jiao Tong University, Shanghai, China</p>
+                    <p>Ph.D. Shanghai Jiao Tong University, Shanghai, China</p>
                 </div>
             </div>
         </section>

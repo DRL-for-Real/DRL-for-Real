@@ -1,0 +1,50 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">数据集层次结构</text>
+  
+  <!-- 主要框架 -->
+  <rect x="50" y="70" width="700" height="380" fill="white" stroke="#ddd" stroke-width="2" rx="10" />
+  
+  <!-- 数据集主分类 -->
+  <rect x="100" y="100" width="600" height="60" fill="#e6f3ff" stroke="#0056b3" stroke-width="2" rx="5" />
+  <text x="400" y="140" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">DRL for Real 数据集</text>
+  
+  <!-- 连接线 -->
+  <line x1="400" y1="160" x2="400" y2="180" stroke="#666" stroke-width="2" />
+  <line x1="250" y1="180" x2="550" y2="180" stroke="#666" stroke-width="2" />
+  <line x1="250" y1="180" x2="250" y2="200" stroke="#666" stroke-width="2" />
+  <line x1="550" y1="180" x2="550" y2="200" stroke="#666" stroke-width="2" />
+  
+  <!-- 两个子集 -->
+  <rect x="100" y="200" width="300" height="50" fill="#e6fff2" stroke="#00a86b" stroke-width="2" rx="5" />
+  <text x="250" y="230" font-family="Arial" font-size="16" text-anchor="middle">通用图像子集 (25,000张图像)</text>
+  
+  <rect x="400" y="200" width="300" height="50" fill="#fff2e6" stroke="#ff7f50" stroke-width="2" rx="5" />
+  <text x="550" y="230" font-family="Arial" font-size="16" text-anchor="middle">自动驾驶子集 (7,000张图像)</text>
+  
+  <!-- 连接线 -->
+  <line x1="250" y1="250" x2="250" y2="270" stroke="#666" stroke-width="2" />
+  <line x1="550" y1="250" x2="550" y2="270" stroke="#666" stroke-width="2" />
+  
+  <!-- 类别 -->
+  <rect x="100" y="270" width="300" height="130" fill="white" stroke="#ddd" stroke-width="2" rx="5" />
+  <text x="250" y="290" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">类别</text>
+  <text x="120" y="320" font-family="Arial" font-size="14">• 人脸</text>
+  <text x="120" y="350" font-family="Arial" font-size="14">• 动物</text>
+  <text x="120" y="380" font-family="Arial" font-size="14">• 植物</text>
+  <text x="250" y="320" font-family="Arial" font-size="14">• 颜色变化</text>
+  <text x="250" y="350" font-family="Arial" font-size="14">• 形状变化</text>
+  <text x="250" y="380" font-family="Arial" font-size="14">• 对象关系</text>
+  
+  <rect x="400" y="270" width="300" height="130" fill="white" stroke="#ddd" stroke-width="2" rx="5" />
+  <text x="550" y="290" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">场景</text>
+  <text x="420" y="320" font-family="Arial" font-size="14">• 12种车辆类型</text>
+  <text x="420" y="350" font-family="Arial" font-size="14">• 雨天场景</text>
+  <text x="420" y="380" font-family="Arial" font-size="14">• 雾天场景</text>
+  <text x="550" y="320" font-family="Arial" font-size="14">• 晴天场景</text>
+  <text x="550" y="350" font-family="Arial" font-size="14">• 不同光照条件</text>
+  <text x="550" y="380" font-family="Arial" font-size="14">• 5+背景场景</text>
+</svg>

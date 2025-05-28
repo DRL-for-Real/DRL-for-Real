@@ -73,17 +73,58 @@ main {
 
 /* 英雄区域 */
 .hero {
-    background: linear-gradient(135deg, #0056b3, #00a0e9);
+    background: linear-gradient(135deg, rgba(0,86,179,0.8), rgba(0,160,233,0.8));
     color: white;
     padding: 4rem 2rem;
     text-align: center;
     border-radius: 8px;
     margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-image: url('../images/logo.png'); */
+    background-size: 250px auto;
+    background-position: center;
+    background-repeat: space;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    position: relative;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.hero-content h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-image: url('../images/logo.png'); */
+    background-size: 300px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    z-index: -1;
+    border-radius: 8px;
 }
 
 .hero-content h2 {
@@ -239,6 +280,85 @@ footer {
     margin-bottom: 1rem;
 }
 
+.challenge-overview {
+    margin-bottom: 2rem;
+}
+
+.challenge-overview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.challenge-tracks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.challenge-track {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.challenge-track h3 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 0.5rem;
+}
+
+.challenge-track h4 {
+    color: #333;
+    margin: 1.2rem 0 0.8rem 0;
+    font-size: 1.2rem;
+}
+
+.challenge-track h5 {
+    color: #0056b3;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.challenge-track p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.challenge-track ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    margin-bottom: 1rem;
+}
+
+.challenge-track li {
+    margin-bottom: 0.5rem;
+}
+
+.challenge-track li ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.multi-factor-category {
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.multi-factor-category h4 {
+    color: #0056b3;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
 .challenge-topics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -282,6 +402,43 @@ footer {
 .challenge-dates ul {
     margin-left: 1.5rem;
     list-style-type: disc;
+}
+
+/* 竞赛赛道容器样式 */
+.challenge-tracks {
+    display: block;
+    margin-top: 2rem;
+}
+
+.track-section {
+    margin-bottom: 1.2rem;
+}
+
+.track-section h4, .evaluation-metrics h4 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 0.5rem;
+}
+
+.evaluation-metrics {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 0.8rem 0 1.2rem 0;
+}
+
+.evaluation-metrics ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+.evaluation-metrics li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
 }
 
 /* 数据集页面样式 */
@@ -383,6 +540,31 @@ footer {
     margin-bottom: 1rem;
 }
 
+/* 竞赛概览部分 */
+.competition-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.competition-section h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.competition-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.competition-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
 .people-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -413,4 +595,55 @@ footer {
 .person-card p {
     color: #666;
     font-size: 0.9rem;
+}
+
+/* 单因子挑战视频展示样式 */
+.single-factor-videos {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 0.8rem 0;
+}
+
+.single-factor-videos h3 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.single-factor-videos p {
+    margin-bottom: 1.5rem;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.video-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.video-item h4 {
+    color: #0056b3;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.video-item video {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 响应式视频容器 */
+@media (max-width: 768px) {
+    .video-container {
+        grid-template-columns: 1fr;
+    }
 }
