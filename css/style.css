@@ -162,6 +162,7 @@ main {
 .intro-section p {
     margin-bottom: 1rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
 /* 赞助商部分 */
@@ -287,6 +288,7 @@ footer {
 .challenge-overview p {
     font-size: 1.1rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .challenge-tracks {
@@ -326,6 +328,7 @@ footer {
 .challenge-track p {
     margin-bottom: 1rem;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .challenge-track ul {
@@ -455,6 +458,27 @@ footer {
     margin-bottom: 1rem;
 }
 
+.dataset-section p, .dataset-description p, .dataset-section li, .dataset-description li {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* 子标题列表样式 */
+.dataset-section ul ul li {
+    position: relative;
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.dataset-section ul ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #0056b3;
+    font-weight: bold;
+}
+
 .dataset-examples {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -493,6 +517,11 @@ footer {
 .call-for-papers-section h2 {
     color: #0056b3;
     margin-bottom: 1rem;
+}
+
+.call-for-papers-section p {
+    text-align: justify;
+    line-height: 1.8;
 }
 
 .call-for-papers-section h3 {
@@ -656,12 +685,14 @@ footer {
 唵
 .single-factor-videos h4 {
     color: #0056b3;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .single-factor-videos p {
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .video-container {
@@ -689,7 +720,7 @@ footer {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* 多因子图片展示样式 */
+/* 多因子图片展示样式 - 与单因子视频展示保持一致 */
 .multi-factor-images {
     background-color: #f8f9fa;
     padding: 1.5rem;
@@ -700,12 +731,14 @@ footer {
 
 .multi-factor-images h4 {
     color: #0056b3;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .multi-factor-images p {
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .image-container {
