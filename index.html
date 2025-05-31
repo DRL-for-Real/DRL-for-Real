@@ -67,7 +67,7 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#introduction">Overview</a></li>
                 <li><a href="#dataset">Dataset</a></li>
                 <li><a href="#challenge">Challenge</a></li>
                 <li><a href="#call-for-papers">Call for Papers</a></li>
@@ -89,7 +89,7 @@
 
         <!-- 介绍部分 -->
         <section id="introduction" class="intro-section">
-            <h2>01 Overview</h2>
+            <h2 style="font-size: 1.5rem;">01 Overview</h2>
             <h3>Disentangled Representation Learning for Controllable Generation (DRL4Real)</h3>
             <p>Disentangled Representation Learning shows promise for enhancing AI's fundamental understanding of the world, potentially addressing hallucination issues in language models and improving controllability in generative systems. Despite significant academic interest, DRL research remains confined to synthetic scenarios due to a lack of realistic benchmarks and unified evaluation metrics.</p>
             <p>ICCV 2025 DRL4Real Workshop aims to bridge this gap by introducing novel, realistic datasets and comprehensive benchmarks for evaluating DRL methods in practical applications. We will focus on key areas including controllable generation and autonomous driving, exploring how DRL can advance model robustness, interpretability, and generalization capabilities.</p>
@@ -97,20 +97,20 @@
 
         <!-- 数据集部分 -->
         <section id="dataset" class="dataset-section">
-            <h2>02 Dataset(used for the competition)</h2>
-            <h3>DRL4Real Dataset</h3>
+            <h2>02 Dataset (used for the competition)</h2>
+
             
             <div class="dataset-description">
                 <p>The DRL4Real dataset is specifically designed for disentangled representation learning and controllable generation, covering multiple realistic scenarios and diverse disentanglement factors. It consists of two main categories aligned with our competition tracks:</p>
                 <div class="dataset-overview-image">
-                    <img src="images/dataset-overview.png" alt="Dataset Overview" style="width: 120%; max-width: 1050px; height: auto; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <img src="images/dataset-overview2.png" alt="Dataset Overview" style="width: 120%; max-width: 1071px; height: auto; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 </div>
                 <ul>
-                    <li><strong>General Image Subset</strong>: Contains approximately 14,000 images across 12 distinct categories: car, cat, cattle, dog, eagle, facial, flower, fruit, horse, pigeon, tree, vegetable, plus time-lapse photography. Images in this subset are partially synthesized using text-to-image generative models, while others are derived from controllable generation video sources.
+                    <h3><li><strong>General Image Subset</strong></h3> It Contains approximately 14,000 images across 13 distinct categories: car, cat, cattle, dog, eagle, facial, flower, fruit, horse, pigeon, tree, vegetable, plus time-lapse photography. Images in this subset are partially synthesized using text-to-image generative models, while others are derived from controllable generation video sources or captured from real videos.
 
                         <ul>
-                            <li><strong>Single-factor variations</strong>: Our dataset provides both text descriptions and corresponding images showing factor changes.</li>
-                            <li><strong>Multi-factor variations</strong>: We primarily provide corresponding text descriptions with a limited number of images as examples.</li>
+                            <li><strong><em>Single-factor variations</em></strong>: Our dataset provides both text descriptions and corresponding images showing factor changes.</li>
+                            <li><strong><em>Multi-factor variations</em></strong>: We primarily provide corresponding text descriptions with a limited number of images as examples.</li>
                         </ul>
 
                         <!-- 单因子挑战视频展示 -->
@@ -143,9 +143,9 @@
                         </div>
 
                         <!-- 多因子挑战图片展示 -->
-                        <div class="multi-factor-images">
+                        <div class="single-factor-videos">
                             <h4>Multi-Factor Manipulation Examples</h4>
-                            <p>Here are demonstration images showing an example of multi-factor manipulation(vase appearance and hand position):</p>
+                            <p>Here are demonstration images showing an example of multi-factor manipulation (vase appearance and hand position):</p>
                             <div class="image-container">
                                 <div class="image-item">
                                     <h5>Flowers in Vase</h5>
@@ -163,12 +163,12 @@
                         </div>
                     </li>
                     
-                    <li><strong>Autonomous Driving Subset</strong>: A vehicle-centered dataset featuring 7 camera perspectives:
+                    <h3><li><strong>Autonomous Driving Subset</strong></h3> A vehicle-centered dataset featuring 5 camera perspectives:
                         <ul>
-                             <li>6 outward-facing cameras positioned around the vehicle</li>
+                             <li>4 outward-facing cameras positioned around the vehicle</li>
                              <li>1 top-down overview camera</li>
                          </ul>
-                        <p>Each sample consists of 50-100 frames extracted from videos captured by these 7 cameras, with simultaneous variations in vehicle motion state, weather conditions (rainy, foggy, sunny), lighting, and other environmental factors. The dataset includes 12 distinct vehicle types and more than 5 background scenarios, systematically generated using the CARLA simulator.</p>
+                        <p>Each sample consists of 50-100 frames extracted from videos captured by these 5 cameras, with simultaneous variations in 9 key factors: vehicle speed (accelerate, constant, decelerate), weather conditions (clear, fog, light rain), lighting, and other environmental factors. The dataset includes 6 distinct vehicle types and more than 5 background scenarios, systematically generated using the CARLA simulator, totaling 17,500 high-quality images.</p>
                         
                         <!-- 自动驾驶数据集视频展示 -->
                         <div class="single-factor-videos">
@@ -241,7 +241,7 @@
                             <li><strong>Image Quality (50%):</strong> Measured using Fréchet Inception Distance (FID)</li>
                             <li><strong>Latent Variable Disentanglement (50%):</strong> Evaluated using Bidirectional DCI, which extends the traditional DCI metric by also measuring how perturbations in real images affect the corresponding latent variables in the encoder</li>
                         </ul>
-                        <p>For more detailed technical information about the metrics, please see <a href="pdf/tmp.pdf" target="_blank">this PDF</a>(It will be released soon)</p>
+                        <p>For more detailed technical information about the metrics, please see <a href="pdf/tmp.pdf" target="_blank">this PDF</a> (It will be released soon)</p>
                     </div>
                     
                     <div class="track-section">
@@ -264,18 +264,12 @@
                         
                         <div class="multi-factor-category">
                             <h5>2.2 Autonomous Dataset</h5>
-                            <p>A vehicle-centered dataset featuring 7 camera perspectives:</p>
-                            <ul>
-                                <li>6 outward-facing cameras positioned around the vehicle</li>
-                                <li>1 top-down overview camera</li>
-                            </ul>
-                            <p>Each sample consists of 50-100 frames with simultaneous variations in vehicle motion state, weather conditions, lighting, and other environmental factors.</p>
-                            <ul>
-                                <li><strong>Overall Leaderboard:</strong> Evaluation uses Structural Similarity Index Measure (SSIM) to compare reconstructed frames with ground truth</li>
+<ul>
+                                <li><strong>Overall Leaderboard:</strong> Open to all methods. Evaluation uses Structural Similarity Index Measure (SSIM) to compare reconstructed frames with ground truth</li>
                                 <li><strong>Disentanglement Leaderboard:</strong> Only for disentanglement models, using the same metrics as the Single-Factor Track</li>
                             </ul>
                         </div>
-                        <p>For more detailed technical information about the metrics, please see <a href="pdf/tmp.pdf" target="_blank">this PDF</a>(It will be released soon)</p>
+                        <p>For more detailed technical information about the metrics, please see <a href="pdf/tmp.pdf" target="_blank">this PDF</a> (It will be released soon)</p>
                     </div>
                 </div>
             </div>
@@ -283,15 +277,15 @@
             <div class="challenge-dates">
                 <h3>Important Dates</h3>
                 <ul>
-                    <li><strong>May 31, 2025:</strong> Workshop Announcement and Training & Validation Dataset Release</li>
-                    <li><strong>June 23, 2025:</strong> Final Test Dataset Release</li>
-                    <li><strong>June 28, 2025:</strong> Workshop Paper Deadline</li>
-                    <li><strong>June 30, 2025:</strong> Competition Submission Deadline</li>
-                    <li><strong>July 3, 2025:</strong> Notification of Competition Results</li>
-                    <li><strong>July 7, 2025:</strong> Challenge Paper Deadline</li>
-                    <li><strong>July 11, 2025:</strong> Notification of Paper Acceptance</li>
-                    <li><strong>August 15, 2025:</strong> Camera Ready Paper Deadline</li>
-                    <li><strong>October 2025:</strong> Workshop and Competition Results Presentation at ICCV 2025</li>
+                    <li><strong>May 31, 23:59:59 AOE:</strong> Workshop Announcement and Training & Validation Dataset Release</li>
+                    <li><strong>June 23, 23:59:59 AOE:</strong> Final Test Dataset Release</li>
+                    <li><strong>June 28, 23:59:59 AOE:</strong> Workshop Paper Deadline</li>
+                    <li><strong>June 30, 23:59:59 AOE:</strong> Competition Submission Deadline</li>
+                    <li><strong>July 3, 23:59:59 AOE:</strong> Notification of Competition Results</li>
+                    <li><strong>July 7, 23:59:59 AOE:</strong> Challenge Paper Deadline</li>
+                    <li><strong>July 11, 23:59:59 AOE:</strong> Notification of Paper Acceptance</li>
+                    <li><strong>August 15, 23:59:59 AOE:</strong> Camera Ready Paper Deadline</li>
+                    <li><strong>October 19:</strong> Workshop and Competition Results Presentation at ICCV 2025</li>
                 </ul>
             </div>
             
