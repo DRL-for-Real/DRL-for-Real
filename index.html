@@ -70,8 +70,9 @@
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#dataset">Dataset</a></li>
                 <li><a href="#challenge">Challenge</a></li>
+                <li><a href="#call-for-papers">Call for Papers</a></li>
                 <li><a href="#speakers">Invited Speakers</a></li>
-                <li><a href="#workshop">Workshop Schedule</a></li>
+                <!-- <li><a href="#workshop">Workshop Schedule</a></li> -->
                 <li><a href="#people">People</a></li>
             </ul>
         </nav>
@@ -82,33 +83,40 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>The 1st International Workshop and Challenge on Disentangled Representation Learning for Controllable Generation</h1>
-                <h2>ICCV 2025 DRL for Real Workshop</h2>
+                <h2>ICCV 2025 DRL4Real Workshop</h2>
             </div>
         </section>
 
         <!-- 介绍部分 -->
         <section id="introduction" class="intro-section">
             <h2>01 Overview</h2>
-            <h3>Disentangled Representation Learning for Controllable Generation (DRL for Real)</h3>
-            <p>Disentangled Representation Learning (DRL) shows promise for enhancing AI's fundamental understanding of the world, potentially addressing hallucination issues in language models and improving controllability in generative systems. Despite significant academic interest, DRL research remains confined to synthetic scenarios due to a lack of realistic benchmarks and unified evaluation metrics.</p>
-            <p>ICCV 2025 DRL for Real Workshop aims to bridge this gap by introducing novel, realistic datasets and comprehensive benchmarks for evaluating DRL methods in practical applications. We will focus on key areas including controllable generation and autonomous driving, exploring how DRL can advance model robustness, interpretability, and generalization capabilities.</p>
+            <h3>Disentangled Representation Learning for Controllable Generation (DRL4Real)</h3>
+            <p>Disentangled Representation Learning shows promise for enhancing AI's fundamental understanding of the world, potentially addressing hallucination issues in language models and improving controllability in generative systems. Despite significant academic interest, DRL research remains confined to synthetic scenarios due to a lack of realistic benchmarks and unified evaluation metrics.</p>
+            <p>ICCV 2025 DRL4Real Workshop aims to bridge this gap by introducing novel, realistic datasets and comprehensive benchmarks for evaluating DRL methods in practical applications. We will focus on key areas including controllable generation and autonomous driving, exploring how DRL can advance model robustness, interpretability, and generalization capabilities.</p>
         </section>
 
         <!-- 数据集部分 -->
         <section id="dataset" class="dataset-section">
-            <h2>02 Dataset</h2>
-            <h3>DRL for Real Dataset</h3>
+            <h2>02 Dataset(used for the competition)</h2>
+            <h3>DRL4Real Dataset</h3>
             
             <div class="dataset-description">
-                <p>The DRL for Real dataset is specifically designed for disentangled representation learning research, covering multiple realistic scenarios and diverse disentanglement factors. It consists of two main categories aligned with our competition tracks:</p>
-                
+                <p>The DRL4Real dataset is specifically designed for disentangled representation learning and controllable generation, covering multiple realistic scenarios and diverse disentanglement factors. It consists of two main categories aligned with our competition tracks:</p>
+                <div class="dataset-overview-image">
+                    <img src="images/dataset-overview.png" alt="Dataset Overview" style="width: 120%; max-width: 1050px; height: auto; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </div>
                 <ul>
-                    <li><strong>General Image Subset</strong>: Contains approximately 25,000 images across several distinct categories, such as human faces, animals, plants, etc. Images in this subset are partially synthesized using text-to-image generative models, while others are derived from controllable generation video sources such as time-lapse photography. This dataset features simultaneous variations in multiple factors, challenging models to disentangle complex, interrelated attributes.
-                    
+                    <li><strong>General Image Subset</strong>: Contains approximately 14,000 images across 12 distinct categories: car, cat, cattle, dog, eagle, facial, flower, fruit, horse, pigeon, tree, vegetable, plus time-lapse photography. Images in this subset are partially synthesized using text-to-image generative models, while others are derived from controllable generation video sources.
+
+                        <ul>
+                            <li><strong>Single-factor variations</strong>: Our dataset provides both text descriptions and corresponding images showing factor changes.</li>
+                            <li><strong>Multi-factor variations</strong>: We primarily provide corresponding text descriptions with a limited number of images as examples.</li>
+                        </ul>
+
                         <!-- 单因子挑战视频展示 -->
                         <div class="single-factor-videos">
                             <h4>Single-Factor Manipulation Examples</h4>
-                            <p>Below are demonstration videos showing examples of single-factor manipulation:</p>
+                            <p>Here are demonstration videos showing examples of single-factor manipulation:</p>
                             <div class="video-container">
                                 <div class="video-item">
                                     <h5>Car Color Manipulation</h5>
@@ -133,19 +141,39 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 多因子挑战图片展示 -->
+                        <div class="multi-factor-images">
+                            <h4>Multi-Factor Manipulation Examples</h4>
+                            <p>Here are demonstration images showing an example of multi-factor manipulation(vase appearance and hand position):</p>
+                            <div class="image-container">
+                                <div class="image-item">
+                                    <h5>Flowers in Vase</h5>
+                                    <img src="images/multi_fisrt.png" alt="Flowers in Vase">
+                                </div>
+                                <div class="image-item">
+                                    <h5>Flowers in Hand</h5>
+                                    <img src="images/multi_second.png" alt="Flowers in Hand">
+                                </div>
+                                <div class="image-item">
+                                    <h5>Vase in Hand</h5>
+                                    <img src="images/multi_third.png" alt="Vase in Hand">
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     
-                    <li><strong>Autonomous Driving Subset</strong>: A vehicle-centered dataset featuring seven camera perspectives:
+                    <li><strong>Autonomous Driving Subset</strong>: A vehicle-centered dataset featuring 7 camera perspectives:
                         <ul>
-                            <li>Six outward-facing cameras positioned around the vehicle</li>
-                            <li>One top-down overview camera</li>
-                        </ul>
-                        <p>Each sample consists of 50-100 frames extracted from videos captured by these seven cameras, with simultaneous variations in vehicle motion state, weather conditions (rainy, foggy, sunny), lighting, and other environmental factors. The dataset includes 12 distinct vehicle types and more than 5 background scenarios, systematically generated using the CARLA simulator.</p>
+                             <li>6 outward-facing cameras positioned around the vehicle</li>
+                             <li>1 top-down overview camera</li>
+                         </ul>
+                        <p>Each sample consists of 50-100 frames extracted from videos captured by these 7 cameras, with simultaneous variations in vehicle motion state, weather conditions (rainy, foggy, sunny), lighting, and other environmental factors. The dataset includes 12 distinct vehicle types and more than 5 background scenarios, systematically generated using the CARLA simulator.</p>
                         
                         <!-- 自动驾驶数据集视频展示 -->
                         <div class="single-factor-videos">
                             <h4>Autonomous Driving Example</h4>
-                            <p>It is a demonstration video showing an example from the autonomous driving dataset:</p>
+                            <p>Here is a demonstration video showing an example from the autonomous driving dataset:</p>
                             <div class="video-container">
                                 <div class="video-item">
                                     <h5>Autonomous Driving Scene</h5>
@@ -156,6 +184,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </li>
                 </ul>
                 
@@ -205,13 +234,14 @@
                     
                     <div class="track-section">
                         <h4>1. Single-Factor Track</h4>
-                        <p>This track provides over 10,000 images covering multiple scenarios, dozens of objects, and hundreds of single-factor variations with text descriptions. Participants <strong>must use disentanglement models</strong> for this track.</p>
+                        <p>This track provides over 13,000 images covering scenarios mentioned in the dataset and corresponding text descriptions. Participants <strong>must use disentanglement models</strong> for this track, such as <a href="https://openreview.net/pdf?id=Sy2fzU9gl" target="_blank">β-VAE</a>, <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/bac4d92b3f6decfe47eab9a5893dd1f6-Abstract-Conference.html" target="_blank">GEM</a>, <a href="https://arxiv.org/abs/1812.04948" target="_blank">StyleGAN</a>, <a href="https://arxiv.org/abs/2402.09712" target="_blank">EncDiff</a>, <a href="https://arxiv.org/abs/2402.02346" target="_blank">CL-Dis</a>, <a href="https://arxiv.org/abs/2410.05564" target="_blank">STA</a>. </p>
                         
                         <h5>Evaluation Metrics</h5>
                         <ul>
                             <li><strong>Image Quality (50%):</strong> Measured using Fréchet Inception Distance (FID)</li>
                             <li><strong>Latent Variable Disentanglement (50%):</strong> Evaluated using Bidirectional DCI, which extends the traditional DCI metric by also measuring how perturbations in real images affect the corresponding latent variables in the encoder</li>
                         </ul>
+                        <p>For more detailed technical information about the metrics, please see <a href="pdf/tmp.pdf" target="_blank">this PDF</a>(It will be released soon)</p>
                     </div>
                     
                     <div class="track-section">
@@ -223,21 +253,21 @@
                             <ul>
                                 <li><strong>Overall Leaderboard:</strong> Open to all methods. Evaluation uses LLM to assess:
                                     <ul>
-                                        <li>Correct attribute generation based on given text</li>
-                                        <li>Change intensity scoring across a set of images</li>
+                                        <li>Evaluate intensity scoring across a set of images</li>
                                         <li>Ratio of intended attribute changes to unintended changes (closer to 1 is better)</li>
                                     </ul>
                                 </li>
                                 <li><strong>Disentanglement Leaderboard:</strong> Only for disentanglement models, using the same metrics as the Single-Factor Track</li>
                             </ul>
+                            
                         </div>
                         
                         <div class="multi-factor-category">
                             <h5>2.2 Autonomous Dataset</h5>
-                            <p>A vehicle-centered dataset featuring seven camera perspectives:</p>
+                            <p>A vehicle-centered dataset featuring 7 camera perspectives:</p>
                             <ul>
-                                <li>Six outward-facing cameras positioned around the vehicle</li>
-                                <li>One top-down overview camera</li>
+                                <li>6 outward-facing cameras positioned around the vehicle</li>
+                                <li>1 top-down overview camera</li>
                             </ul>
                             <p>Each sample consists of 50-100 frames with simultaneous variations in vehicle motion state, weather conditions, lighting, and other environmental factors.</p>
                             <ul>
@@ -245,6 +275,7 @@
                                 <li><strong>Disentanglement Leaderboard:</strong> Only for disentanglement models, using the same metrics as the Single-Factor Track</li>
                             </ul>
                         </div>
+                        <p>For more detailed technical information about the metrics, please see <a href="pdf/tmp.pdf" target="_blank">this PDF</a>(It will be released soon)</p>
                     </div>
                 </div>
             </div>
@@ -252,36 +283,59 @@
             <div class="challenge-dates">
                 <h3>Important Dates</h3>
                 <ul>
-                    <li><strong>June 1, 2025:</strong> Competition Announcement and Dataset Release</li>
-                    <li><strong>June 23, 2025:</strong> Competition Submission Deadline</li>
-                    <li><strong>July 24, 2025:</strong> Notification of Competition Results</li>
-                    <li><strong>June 25, 2025:</strong> Paper Submission Deadline</li>
-                    <li><strong>July 10, 2025:</strong> Notification of Paper Acceptance</li>
-                    <li><strong>August 15, 2025:</strong> Final Documents Submission to ICCV</li>
+                    <li><strong>May 31, 2025:</strong> Workshop Announcement and Training & Validation Dataset Release</li>
+                    <li><strong>June 23, 2025:</strong> Final Test Dataset Release</li>
+                    <li><strong>June 28, 2025:</strong> Workshop Paper Deadline</li>
+                    <li><strong>June 30, 2025:</strong> Competition Submission Deadline</li>
+                    <li><strong>July 3, 2025:</strong> Notification of Competition Results</li>
+                    <li><strong>July 7, 2025:</strong> Challenge Paper Deadline</li>
+                    <li><strong>July 11, 2025:</strong> Notification of Paper Acceptance</li>
+                    <li><strong>August 15, 2025:</strong> Camera Ready Paper Deadline</li>
                     <li><strong>October 2025:</strong> Workshop and Competition Results Presentation at ICCV 2025</li>
                 </ul>
             </div>
             
-            <p>Top three winners from each leaderboard will be invited to the ICCV conference to present their work.</p>
             <p>For more details about the challenge, please visit the <a href="challenge.html">Challenge</a> page.</p>
+        </section>
+
+        <!-- Call for Papers部分 -->
+        <section id="call-for-papers" class="call-for-papers-section">
+            <h2>04 Call for Papers</h2>
+            <div class="call-for-papers-content">
+                <p>The DRL for Real Workshop aims to bring together researchers and practitioners from academia and industry to discuss and explore the latest trends, challenges, and innovations in disentangled representation learning and controllable generation. We welcome original research contributions addressing, but not limited to, the following topics:</p>
+                
+                <ul>
+                    <li>Disentangled representation learning</li>
+                    <li>Controllable image and video generation</li>
+                    <li>Scene understanding and generation in autonomous driving</li>
+                    <li>Multi-modal disentanglement (image, video, text)</li>
+                    <li>Disentanglement in generative models (GANs, VAEs, Diffusion Models)</li>
+                    <li>Applications of disentangled representations in real scensarios</li>
+                    <li>Few-shot and zero-shot learning with disentangled representations</li>
+                    <li>Integration of large language models for controllable generation</li>
+                </ul>
+                
+                <h3>Submission Details</h3>
+                <p>Papers will be peer-reviewed and comply with the ICCV 2025 proceedings style, format and length. The camera-ready deadline aligns with the main conference. Accepted papers must be registered and presented to ensure their inclusion in the IEEE Xplore Library. For details, refer to the ICCV 2025 Author Guidelines.</p>
+            </div>
         </section>
 
         <!-- 邀请嘉宾部分 -->
         <section id="speakers" class="speakers-section">
-            <h2>04 Invited Speakers</h2>
+            <h2>05 Invited Speakers</h2>
             <div class="speakers-container">
                 <h3 style="text-align: center; margin: 40px 0;">Coming Soon</h3>
             </div>
         </section>
 
         <!-- 研讨会日程部分 -->
-        <section id="workshop" class="workshop-section">
-            <h2>05 Workshop Schedule</h2>
+        <!-- <section id="workshop" class="workshop-section">
+            <h2>06 Workshop Schedule</h2>
             <h3>DRL for Real: The 1st International Workshop and Challenge on Disentangled Representation Learning for Controllable Generation</h3>
             
             <div class="workshop-schedule">
                 <div class="workshop-session">
-                    <h3>Part One</h3>
+                    <h3>Part 1</h3>
                     <h4>Introduction & Organizer Talks</h4>
                     <table>
                         <tr>
@@ -312,7 +366,7 @@
                 </div>
                 
                 <div class="workshop-session">
-                    <h3>Part Two</h3>
+                    <h3>Part 2</h3>
                     <h4>Invited Talks</h4>
                     <table>
                         <tr>
@@ -338,7 +392,7 @@
                 </div>
                 
                 <div class="workshop-session">
-                    <h3>Part Three</h3>
+                    <h3>Part 3</h3>
                     <h4>Invited Talks & Challenge Winner Presentations</h4>
                     <table>
                         <tr>
@@ -369,7 +423,7 @@
                 </div>
                 
                 <div class="workshop-session">
-                    <h3>Part Four</h3>
+                    <h3>Part 4</h3>
                     <h4>Poster Session & Closing</h4>
                     <table>
                         <tr>
@@ -385,11 +439,11 @@
                     </table>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- 人员部分 -->
         <section id="people" class="people-section">
-            <h2>07 People</h2>
+            <h2>06 People</h2>
             
             <div class="people-category">
                 <h3>Organizers</h3>
@@ -397,7 +451,7 @@
                     <div class="person-card">
                         <img src="images/jinxin.jpg" alt="Xin Jin">
                         <h3>Xin Jin</h3>
-                        <p>Professor</p>
+                        <p>Assistant Professor</p>
                         <p>Eastern Institute of Technology, Ningbo, China</p>
                         <p><a href="mailto:jinxin@eitech.edu.cn">jinxin@eitech.edu.cn</a></p>
                     </div>
@@ -413,7 +467,7 @@
                     <div class="person-card">
                         <img src="images/songyue.png" alt="Yue Song">
                         <h3>Yue Song</h3>
-                        <p>Postdoctoral</p>
+                        <p>Research Associate</p>
                         <p>California Institute of Technology (Caltech), USA</p>
                         <p><a href="mailto:yue.song@unitn.it">yue.song@unitn.it</a></p>
                     </div>
@@ -421,7 +475,7 @@
                     <div class="person-card">
                         <img src="images/XihuiLiu-photo.jpeg" alt="Xihui Liu">
                         <h3>Xihui Liu</h3>
-                        <p>Professor</p>
+                        <p>Assistant Professor</p>
                         <p>The University of Hong Kong, Hong Kong, China</p>
                         <p><a href="mailto:xihuiliu@eee.hku.hk">xihuiliu@eee.hku.hk</a></p>
                     </div>
@@ -429,7 +483,7 @@
                     <div class="person-card">
                         <img src="images/yangshuai.png" alt="Shuai Yang">
                         <h3>Shuai Yang</h3>
-                        <p>Professor</p>
+                        <p>Assistant Professor</p>
                         <p>Peking University, Beijing, China</p>
                         <p><a href="mailto:williamyang@pku.edu.cn">williamyang@pku.edu.cn</a></p>
                     </div>
@@ -499,9 +553,16 @@
                 <div class="people-grid">
                     <div class="person-card">
                         <h3>Zhenyu Hu</h3>
-                        <p>Engineer</p>
+                        <p>Research Engineer</p>
                         <p>Institute of Digital Twin, EIT, Ningbo, China</p>
                         <p><a href="mailto:zhu@idt.eitech.edu.cn">zhu@idt.eitech.edu.cn</a></p>
+                    </div>
+
+                    <div class="person-card">
+                        <h3>Xin Li</h3>
+                        <p>Postdoc Research Fellow</p>
+                        <p>University of Science and Technology of China, Hefei, China</p>
+                        <p><a href="mailto:xin.li@ustc.edu.cn">xin.li@ustc.edu.cn</a></p>
                     </div>
                     
                     <div class="person-card">
@@ -525,6 +586,13 @@
                         <p><a href="mailto:wy_zhang@sjtu.edu.cn">wy_zhang@sjtu.edu.cn</a></p>
                     </div>
                     
+                    <div class="person-card">
+                        <h3>Yunzhong Zheng</h3>
+                        <p>Undergraduate</p>
+                        <p>New York University, New York, USA</p>
+                        <!-- <p><a href="mailto:wy_zhang@sjtu.edu.cn">wy_zhang@sjtu.edu.cn</a></p> -->
+                    </div>
+
                 </div>
             </div>
         </section>

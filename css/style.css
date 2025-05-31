@@ -481,6 +481,51 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+/* Call for Papers页面样式 */
+.call-for-papers-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.call-for-papers-section h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+.call-for-papers-section h3 {
+    color: #0056b3;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.call-for-papers-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.call-for-papers-content ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    margin-bottom: 1rem;
+    columns: 2;
+}
+
+.call-for-papers-content li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .call-for-papers-content ul {
+        columns: 1;
+    }
+}
+
 /* 研讨会页面样式 */
 .workshop-section {
     background-color: white;
@@ -567,34 +612,37 @@ footer {
 
 .people-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
     margin-top: 2rem;
 }
 
 .person-card {
     background-color: #f8f9fa;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     text-align: center;
 }
 
 .person-card img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .person-card h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
 }
 
 .person-card p {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.3;
 }
 
 /* 单因子挑战视频展示样式 */
@@ -605,8 +653,8 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     margin: 0.8rem 0;
 }
-
-.single-factor-videos h3 {
+唵
+.single-factor-videos h4 {
     color: #0056b3;
     margin-bottom: 1rem;
     font-size: 1.4rem;
@@ -630,7 +678,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.video-item h4 {
+.video-item h5 {
     color: #0056b3;
     margin-bottom: 0.8rem;
     text-align: center;
@@ -641,9 +689,56 @@ footer {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* 响应式视频容器 */
+/* 多因子图片展示样式 */
+.multi-factor-images {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 0.8rem 0;
+}
+
+.multi-factor-images h4 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.multi-factor-images p {
+    margin-bottom: 1.5rem;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.image-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.image-item h5 {
+    color: #0056b3;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.image-item img {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+}
+
+/* 响应式容器 */
 @media (max-width: 768px) {
-    .video-container {
+    .video-container,
+    .image-container {
         grid-template-columns: 1fr;
     }
 }
