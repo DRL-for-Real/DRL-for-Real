@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRL4Real Dataset Download</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0056b3;
+        }
+        .dataset-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .dataset-column {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 0; /* 防止内容溢出 */
+        }
+        .dataset-column h2 {
+            color: #0056b3;
+            text-align: center;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .dataset-description {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .dataset-description p {
+            text-align: justify;
+            text-justify: inter-word;
+            margin-bottom: 15px;
+        }
+        .dataset-info {
+            margin-top: auto;
+        }
+        .dataset-info h3 {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            color: #333;
+        }
+        .dataset-info ul {
+            padding-left: 20px;
+        }
+        .dataset-info li {
+            margin-bottom: 5px;
+        }
+        .download-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .download-button {
+            display: inline-block;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background-color: #003d82;
+        }
+        small {
+            display: block;
+            margin-top: 5px;
+            color: #777;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-link a {
+            display: inline-block;
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-link a:hover {
+            background-color: #5a6268;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .dataset-container {
+                flex-direction: column;
+            }
+            .dataset-column {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 删除了 header 部分 -->
+
+    <main>
+        <section class="intro-section">
+            <h2>DRL4Real Dataset</h2>
+            <p>Welcome to the DRL4Real dataset download page. Our dataset is specifically designed for disentangled representation learning and controllable generation, covering multiple realistic scenarios and diverse disentanglement factors. It consists of three main categories as shown below.</p>
+        </section>
+        
+        <div class="dataset-container">
+            <!-- 单因子数据集 -->
+            <div class="dataset-column">
+                <h2>Single-Factor Dataset</h2>
+                <div class="dataset-description">
+                    <p>This dataset contains over 13,000 images with single-factor variations across 13 different categories including car, cat, cattle, dog, eagle, facial, flower, fruit, horse, pigeon, tree, vegetable, and time-lapse photography.</p>
+                    
+                    <div class="dataset-info">
+                        <h3>Dataset Details:</h3>
+                        <ul>
+                            <li><strong>Size:</strong> 13,000+ images</li>
+                            <li><strong>Categories:</strong> 13 distinct categories</li>
+                            <li><strong>Format:</strong> High-resolution images with text descriptions</li>
+                            <li><strong>Features:</strong> Controlled single-factor variations with corresponding text descriptions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <a href="#" class="download-button">Download Single-Factor Dataset</a>
+                </div>
+            </div>
+            
+            <!-- 多因子数据集 -->
+            <div class="dataset-column">
+                <h2>Multi-Factor Dataset</h2>
+                <div class="dataset-description">
+                    <p>This dataset focuses on multi-factor variations across the same 13 categories as the single-factor dataset. It provides both text descriptions and a limited number of example images showing how multiple factors can be manipulated simultaneously.</p>
+                    
+                    <div class="dataset-info">
+                        <h3>Dataset Details:</h3>
+                        <ul>
+                            <li><strong>Size:</strong> Text descriptions with example images</li>
+                            <li><strong>Categories:</strong> 13 distinct categories</li>
+                            <li><strong>Format:</strong> High-resolution images with detailed text descriptions</li>
+                            <li><strong>Features:</strong> Multiple attribute variations with controlled factor changes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <a href="https://drive.google.com/file/d/1yDfytA0L_h5xUubVk8VYa_msGMnLzj5f/view?usp=sharing" class="download-button">Download Multi-Factor Dataset</a>
+                </div>
+            </div>
+            
+            <!-- 自动驾驶数据集 -->
+            <div class="dataset-column">
+                <h2>Autonomous Driving Dataset</h2>
+                <div class="dataset-description">
+                    <p>A vehicle-centered dataset featuring 5 camera perspectives with simultaneous variations in 9 key factors including vehicle speed, weather conditions, lighting, and other environmental factors.</p>
+                    
+                    <div class="dataset-info">
+                        <h3>Dataset Details:</h3>
+                        <ul>
+                            <li><strong>Size:</strong> 17,500 high-quality images</li>
+                            <li><strong>Camera Views:</strong> 5 perspectives (4 outward-facing + 1 top-down)</li>
+                            <li><strong>Vehicles:</strong> 6 distinct vehicle types</li>
+                            <li><strong>Scenarios:</strong> 5+ background scenarios</li>
+                            <li><strong>Factors:</strong> 9 key variation factors</li>
+                            <li><strong>Format:</strong> 50-100 frames per sample</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <a href="#" class="download-button">Download Autonomous Driving Dataset</a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <div class="back-link">
+                <a href="index.html">返回主页</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DRL4Real Workshop. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
