@@ -55,21 +55,57 @@
             text-align: justify;
             text-justify: inter-word;
             margin-bottom: 15px;
+            min-height: 60px; /* 减小描述文本区域的最小高度 */
         }
         .dataset-info {
-            margin-top: auto;
+            margin-top: 0; /* 移除顶部边距，使其更靠近描述文本 */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* 添加相对定位 */
+            padding-top: 40px; /* 为标题预留空间 */
         }
         .dataset-info h3 {
-            margin-bottom: 10px;
+            margin: 0; /* 移除所有边距 */
             border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            padding: 5px 0; /* 保持垂直内边距 */
             color: #333;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            position: absolute; /* 使用绝对定位 */
+            top: 0; /* 放置在顶部 */
+            left: 0; /* 左对齐 */
+            width: 100%; /* 占满宽度 */
         }
         .dataset-info ul {
             padding-left: 20px;
+            flex-grow: 1;
+            min-height: 180px; /* 确保所有列表区域高度一致 */
+            margin-top: 0; /* 移除顶部边距 */
         }
         .dataset-info li {
             margin-bottom: 5px;
+        }
+        /* 为Multi-Factor Dataset添加特殊样式 */
+        .dataset-column:nth-child(2) .dataset-description p {
+            min-height: 30px; /* 进一步减小Multi-Factor Dataset的描述文本最小高度 */
+            margin-bottom: 5px; /* 减小底部边距 */
+        }
+        
+        /* 为Multi-Factor Dataset的Dataset Details添加可调整的顶部边距 */
+        .dataset-column:nth-child(2) .dataset-info {
+            margin-top: 49px; /* 这个值可以手动调整，增加正值会增加间距，减小或使用负值会减少间距 */
+        }
+        
+        /* 为Single-Factor Dataset的Dataset Details添加可调整的顶部边距 */
+        .dataset-column:nth-child(1) .dataset-info {
+            margin-top: 9px; /* 这个值可以手动调整，增加正值会增加间距，减小或使用负值会减少间距 */
+        }
+        
+        /* 调整其他数据集的样式，保持整体平衡 */
+        .dataset-column:nth-child(1) .dataset-description p,
+        .dataset-column:nth-child(3) .dataset-description p {
+            min-height: 70px; /* 增加其他数据集描述文本的最小高度 */
         }
         .download-section {
             margin-top: 20px;
@@ -144,14 +180,14 @@
                         <ul>
                             <li><strong>Size:</strong> 13,000+ images</li>
                             <li><strong>Categories:</strong> 13 distinct categories</li>
-                            <li><strong>Format:</strong> High-resolution images with text descriptions</li>
+                            <li><strong>Format:</strong> High-resolution images with detailed text descriptions</li>
                             <li><strong>Features:</strong> Controlled single-factor variations with corresponding text descriptions</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="download-section">
-                    <a href="#" class="download-button">Download Single-Factor Dataset</a>
+                    <a href="https://drive.google.com/file/d/1r3ALsZWZh5a39AsuxiyClFpSGI0L4Eet/view?usp=sharing" class="download-button">Download Single-Factor Dataset</a>
                 </div>
             </div>
             
@@ -159,14 +195,14 @@
             <div class="dataset-column">
                 <h2>Multi-Factor Dataset</h2>
                 <div class="dataset-description">
-                    <p>This dataset focuses on multi-factor variations across the same 13 categories as the single-factor dataset. It provides both text descriptions and a limited number of example images showing how multiple factors can be manipulated simultaneously.</p>
+                    <p>This dataset focuses on multi-factor variations across the same 12 categories as the single-factor dataset. It provides only text descriptions showing how multiple factors can be manipulated simultaneously.</p>
                     
                     <div class="dataset-info">
                         <h3>Dataset Details:</h3>
                         <ul>
-                            <li><strong>Size:</strong> Text descriptions with example images</li>
-                            <li><strong>Categories:</strong> 13 distinct categories</li>
-                            <li><strong>Format:</strong> High-resolution images with detailed text descriptions</li>
+                            <li><strong>Size:</strong> 24000+ texts</li>
+                            <li><strong>Categories:</strong> 12 distinct categories</li>
+                            <li><strong>Format:</strong> Detailed text descriptions</li>
                             <li><strong>Features:</strong> Multiple attribute variations with controlled factor changes</li>
                         </ul>
                     </div>
@@ -181,17 +217,17 @@
             <div class="dataset-column">
                 <h2>Autonomous Driving Dataset</h2>
                 <div class="dataset-description">
-                    <p>A vehicle-centered dataset featuring 5 camera perspectives with simultaneous variations in 9 key factors including vehicle speed, weather conditions, lighting, and other environmental factors.</p>
+                    <p>A vehicle-centered dataset featuring 5 camera perspectives with simultaneous variations in 8 key factors including vehicle speed, weather conditions, lighting, and other environmental factors.</p>
                     
                     <div class="dataset-info">
                         <h3>Dataset Details:</h3>
                         <ul>
-                            <li><strong>Size:</strong> 17,500 high-quality images</li>
+                            <li><strong>Size:</strong> 20,000 high-quality images</li>
                             <li><strong>Camera Views:</strong> 5 perspectives (4 outward-facing + 1 top-down)</li>
-                            <li><strong>Vehicles:</strong> 6 distinct vehicle types</li>
-                            <li><strong>Scenarios:</strong> 5+ background scenarios</li>
-                            <li><strong>Factors:</strong> 9 key variation factors</li>
-                            <li><strong>Format:</strong> 50-100 frames per sample</li>
+                            <li><strong>Vehicles:</strong> 3 distinct vehicle types</li>
+                            <li><strong>Scenarios:</strong> 5 background scenarios</li>
+                            <li><strong>Factors:</strong> 8 key variation factors</li>
+                            <li><strong>Format:</strong> 100 frames per sample</li>
                         </ul>
                     </div>
                 </div>
